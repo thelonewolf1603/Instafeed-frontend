@@ -3,7 +3,7 @@ import axios from "axios";
 import "../App.css";
 import { createPostUrl } from "../Constants";
 
-export const CreatePost = ({user, fetchPosts}) => {
+export const CreatePost = ({ user, fetchPosts }) => {
   const [content, setContent] = React.useState("");
 
   const submitHandler = async (e) => {
@@ -13,8 +13,8 @@ export const CreatePost = ({user, fetchPosts}) => {
         author: user,
         created: Date.now(),
       });
-      setContent("")
-      fetchPosts()
+      setContent("");
+      fetchPosts();
     } catch (e) {
       alert("error occurred while uploading");
     }
@@ -22,7 +22,9 @@ export const CreatePost = ({user, fetchPosts}) => {
 
   return (
     <div className="CreatePost">
-      <div><h2>{"Create a new post"}</h2></div>
+      <div>
+        <h2>{"Create a new post"}</h2>
+      </div>
       <textarea
         className="InputContent"
         onChange={(e) => setContent(e.target.value)}
@@ -31,7 +33,11 @@ export const CreatePost = ({user, fetchPosts}) => {
         cols="100"
       />
       <div>
-        <button disabled={content.length === 0} className="SubmitButton" onClick={submitHandler}>
+        <button
+          disabled={content.length === 0}
+          className="SubmitButton"
+          onClick={submitHandler}
+        >
           {"Post"}
         </button>
       </div>

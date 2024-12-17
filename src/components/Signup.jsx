@@ -1,7 +1,9 @@
 import axios from "axios";
 import * as React from "react";
 import { signupUrl } from "../Constants";
-export const Signup = ({setLoginPage}) => {
+import "../App.css";
+
+export const Signup = ({ setLoginPage }) => {
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
 
@@ -11,28 +13,31 @@ export const Signup = ({setLoginPage}) => {
         username,
         password,
       });
-      setLoginPage(true)
-     
+      setLoginPage(true);
     } catch (e) {
-        alert(e.response?.data?.message)
+      alert(e.response?.data?.message);
     }
   };
 
   return (
     <>
       <input
+        className={"AuthInput"}
         value={username}
         onChange={(e) => setUsername(e.target.value)}
         type="text"
         placeholder="username"
       />
       <input
+        className={"AuthInput"}
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         type="password"
         placeholder="password"
       />
-      <button onClick={handleSubmit}>{"Signup"}</button>
+      <button className={"AuthInput"} onClick={handleSubmit}>
+        {"Signup"}
+      </button>
     </>
   );
 };

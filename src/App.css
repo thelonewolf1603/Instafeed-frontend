@@ -1,5 +1,5 @@
 .App {
-  background: linear-gradient(rgb(26, 160, 218), white) ;
+  background: linear-gradient(rgb(26, 160, 218), rgb(27, 2, 82)) ;
   height: 100vh;
   overflow: scroll;
   text-align: center;
@@ -16,7 +16,7 @@
   max-width: 160vh;
   margin: auto;
   border-radius: 10px;
-  box-shadow: 10px 10px 10px gray;
+  box-shadow: 5px 5px 5px gray;
   margin-bottom: 20px;
   background: rgb(159, 95, 218);
 }
@@ -29,7 +29,28 @@
   border-color: black;
   border: 2px solid;
   position: relative;
-  box-shadow: 10px 10px 10px rgb(34, 1, 33);
+  box-shadow: 5px 5px 5px rgb(34, 1, 33);
+}
+
+.AuthContainer{
+
+  background-color: rgb(102, 102, 186);
+  width: 50vh;
+  height: 30vh;
+  margin: auto;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px solid;
+}
+
+.AuthInput{
+  font-size: large;
+  padding-left: 10px;
+  border-radius: 10px;
 }
 
 .InputContent{
@@ -37,7 +58,8 @@
   border-radius: 10px;
   border: 2px solid;
   padding: 20px;
-  box-shadow: 10px 10px 10px gray;
+  box-shadow: 5px 5px 5px gray;
+  font-size: large;
 }
 
 .PostContent{
@@ -70,8 +92,9 @@
   border-radius: 20px;
   margin-top: 10px;
   background: rgb(71, 71, 232);
-  box-shadow: 10px 10px 10px gray;
-  border: 2px solid;
+  box-shadow: 5px 5px 5px gray;
+  border: 2px solid black;
+  color: whitesmoke;
 }
 
 .SubmitButton:not(:disabled):hover{
@@ -80,7 +103,7 @@
   border-radius: 20px;
   margin-top: 10px;
   background: rgb(29, 29, 88);
-  box-shadow: 10px 10px 10px gray;
+  box-shadow: 5px 5px 5px gray;
   cursor: pointer;
   border: 2px solid;
 }

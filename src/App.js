@@ -6,7 +6,7 @@ import { Login } from "./components/Login";
 const HomePage = ({ user }) => {
   return (
     <>
-      <h1>{"Welcome to InstaFeed"}</h1>
+      <h1>{"Welcome to InstaFeed! your one stop for your personal blogs..."}</h1>
       <BlogFeed user={user} />
     </>
   );

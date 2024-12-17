@@ -2,6 +2,8 @@ import axios from "axios";
 import * as React from "react";
 import { loginUrl } from "../Constants";
 import { Signup } from "./Signup";
+import "../App.css";
+
 export const Login = ({ setUser }) => {
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
@@ -19,33 +21,37 @@ export const Login = ({ setUser }) => {
     }
   };
 
-
   return (
-    <>
+    <div className={"AuthContainer"}>
       {isLoginPage ? (
         <>
           <input
+            className={"AuthInput"}
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             type="text"
             placeholder="username"
           />
           <input
+            className={"AuthInput"}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             type="password"
             placeholder="password"
           />
-          <button onClick={handleSubmit}>
+          <button className={"AuthInput"} onClick={handleSubmit}>
             {isLoginPage ? "Login" : "Sign up"}
           </button>
         </>
       ) : (
         <Signup setLoginPage={setLoginPage} />
       )}
-      <button onClick={() => setLoginPage(!isLoginPage)}>
+      <button
+        className={"AuthInput"}
+        onClick={() => setLoginPage(!isLoginPage)}
+      >
         {isLoginPage ? "Sign up as a new user" : "Already an existing user"}
       </button>
-    </>
+    </div>
   );
 };
