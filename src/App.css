@@ -17,6 +17,8 @@
   margin: auto;
   border-radius: 10px;
   box-shadow: 10px 10px 10px gray;
+  margin-bottom: 20px;
+  background: rgb(159, 95, 218);
 }
 
 .Post{
@@ -27,6 +29,7 @@
   border-color: black;
   border: 2px solid;
   position: relative;
+  box-shadow: 10px 10px 10px rgb(34, 1, 33);
 }
 
 .InputContent{

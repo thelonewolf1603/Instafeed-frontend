@@ -1,15 +1,16 @@
 import * as React from "react";
 import axios from "axios";
 import "../App.css";
+import { createPostUrl } from "../Constants";
 
-export const CreatePost = ({fetchPosts}) => {
+export const CreatePost = ({user, fetchPosts}) => {
   const [content, setContent] = React.useState("");
 
   const submitHandler = async (e) => {
     try {
-      await axios.post("http://127.0.0.1:8080/posts/add", {
+      await axios.post(createPostUrl, {
         content: content,
-        author: "neeladri",
+        author: user,
         created: Date.now(),
       });
       setContent("")
@@ -26,7 +27,7 @@ export const CreatePost = ({fetchPosts}) => {
         className="InputContent"
         onChange={(e) => setContent(e.target.value)}
         value={content}
-        rows="20"
+        rows="15"
         cols="100"
       />
       <div>
